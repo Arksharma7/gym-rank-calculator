@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+<h1 class="mainTitle">🔥 Rank Your Strength</h1>
+<p class="subTitle">Lets get you your gym rank</p>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<audio id="clickSound"
+src="https://assets.mixkit.co/active_storage/sfx/2571/2571-preview.mp3">
+</audio>
+
+<!-- RED STAR BACKGROUND -->
+<div id="particles"></div>
+
+<!-- LOGIN SCREEN -->
+<div id="loginUI">
+
+<input id="email" placeholder="Email">
+<input id="password" type="password" placeholder="Password">
+
+<button class="glowBtn" onclick="signup()">Sign Up</button>
+<button class="glowBtn" onclick="login()">Login</button>
+<button class="glowBtn" onclick="continueGuest()">Guest</button>
+
+</div>
+
+<!-- MAIN APP -->
+<div id="mainLayout">
+
+<!-- LEFT PANEL -->
+<div id="leftPanel" class="card">
+
+<h2>Strength Progress</h2>
+<canvas id="progressChart"></canvas>
+
+<h2>Workout History</h2>
+<ul id="history"></ul>
+
+<h2>Goals</h2>
+
+<select id="exerciseSelect">
+<option>Bench Press</option>
+<option>Deadlift</option>
+<option>Squat</option>
+</select>
+
+<input id="goalWeight" placeholder="Goal Weight">
+
+<button class="glowBtn" onclick="setGoal()">Set Goal</button>
+
+<ul id="goalList"></ul>
+
+</div>
+
+<!-- CENTER PANEL -->
+<div id="centerPanel" class="card">
+
+<input id="bp" placeholder="Bench Weight">
+<input id="bpReps" placeholder="Bench Reps">
+
+<input id="dl" placeholder="Deadlift Weight">
+<input id="dlReps" placeholder="Deadlift Reps">
+
+<input id="squat" placeholder="Squat Weight">
+<input id="squatReps" placeholder="Squat Reps">
+<input id="bw" placeholder="Bodyweight">
+
+<button class="glowBtn bigBtn" onclick="calculate()">⚡ Calculate Rank</button>
+
+<h2 id="output"></h2>
+<h3 id="prOutput"></h3>
+
+<!-- RANK REVEAL -->
+<div id="rankReveal" class="hidden">
+<img id="rankRevealImg">
+<h2 id="rankRevealText"></h2>
+</div>
+
+<!-- XP BAR -->
+<div id="xpBox">
+
+<div id="xpBarOuter">
+<div id="xpBarInner"></div>
+</div>
+
+<p id="levelText">Level 1 | XP 0 / 100</p>
+
+</div>
+
+</div>
+
+<!-- RIGHT PANEL -->
+<div id="rightPanel" class="card">
+
+<h3 id="totalUsers">Users Ranked: 0</h3>
+
+<div class="rankCard" data-rank="GOD">
+<span class="rankCount"></span>
+<img src="https://file.oyephoto.com/uploads/preview/lord-hanuman-ji-bhakti-photos-for-mobile-wallpapers-hd-11644406115de9ky8hqzg.jpg">
+<p>GOD</p>
+</div>
+
+<div class="rankCard" data-rank="IMMORTAL">
+<span class="rankCount"></span>
+<img src="https://i.pinimg.com/736x/73/29/6e/73296ed0bad6d9f33d4e08fcb06ce9e6.jpg">
+<p>IMMORTAL</p>
+</div>
+
+<div class="rankCard" data-rank="BEAST">
+<span class="rankCount"></span>
+<img src="https://i.pinimg.com/736x/44/ef/14/44ef14e057b7ca9309731ffc26e6a34f.jpg">
+<p>BEAST</p>
+</div>
+
+<div class="rankCard" data-rank="INTERMEDIATE">
+<span class="rankCount"></span>
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKN3ttuV2L44SkCTCbhQcknDbsJTQ3s_-8Ng&s">
+<p>INTERMEDIATE</p>
+</div>
+
+<div class="rankCard" data-rank="UNDISCIPLINED">
+<span class="rankCount"></span>
+<img src="https://i.pinimg.com/736x/75/6a/ae/756aae0f2277a148c6f823b98d094d64.jpg">
+<p>UNDISCIPLINED</p>
+</div>
+
+<div class="rankCard" data-rank="NPC">
+<span class="rankCount"></span>
+<img src="https://ih1.redbubble.net/image.5082487452.4686/mp,504x498,matte,f8f8f8,t-pad,600x600,f8f8f8.jpg">
+<p>NPC</p>
+</div>
+
+</div>
+
+</div>
+
+<script src="rank.js"></script>
+<script src="app.js"></script>
+<script src="auth.js"></script>
+
+</body>
+</html>
