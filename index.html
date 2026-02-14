@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-<h1 class="mainTitle">🔥 Rank Your Strength</h1>
-<p class="subTitle">Lets get you your gym rank</p>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <link rel="stylesheet" href="style.css">
+
+<title>Rank Your Strength</title>
 
 </head>
 
 <body>
+
+<h1 class="mainTitle">🔥 Rank Your Strength</h1>
+<p class="subTitle">Lets get you your gym rank</p>
 
 <audio id="clickSound"
 src="https://assets.mixkit.co/active_storage/sfx/2571/2571-preview.mp3">
@@ -53,9 +55,7 @@ src="https://assets.mixkit.co/active_storage/sfx/2571/2571-preview.mp3">
 </select>
 
 <input id="goalWeight" placeholder="Goal Weight">
-
 <button class="glowBtn" onclick="setGoal()">Set Goal</button>
-
 <ul id="goalList"></ul>
 
 </div>
@@ -78,21 +78,16 @@ src="https://assets.mixkit.co/active_storage/sfx/2571/2571-preview.mp3">
 <h2 id="output"></h2>
 <h3 id="prOutput"></h3>
 
-<!-- RANK REVEAL -->
 <div id="rankReveal" class="hidden">
 <img id="rankRevealImg">
 <h2 id="rankRevealText"></h2>
 </div>
 
-<!-- XP BAR -->
 <div id="xpBox">
-
 <div id="xpBarOuter">
 <div id="xpBarInner"></div>
 </div>
-
 <p id="levelText">Level 1 | XP 0 / 100</p>
-
 </div>
 
 </div>
@@ -142,9 +137,9 @@ src="https://assets.mixkit.co/active_storage/sfx/2571/2571-preview.mp3">
 
 </div>
 
+<script src="rank.js"></script>
 <script src="app.js"></script>
+<script src="auth.js"></script>
 
 </body>
 </html>
-
-
