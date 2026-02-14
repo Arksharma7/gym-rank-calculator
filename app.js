@@ -20,6 +20,7 @@ INTERMEDIATE:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKN3ttuV2L44
 UNDISCIPLINED:"https://i.pinimg.com/736x/75/6a/ae/756aae0f2277a148c6f823b98d094d64.jpg",
 NPC:"https://ih1.redbubble.net/image.5082487452.4686/mp,504x498,matte,f8f8f8,t-pad,600x600,f8f8f8.jpg"
 };
+document.body.classList.add("auth-lock");
 
 let xp=0;
 let level=1;
@@ -236,8 +237,14 @@ particles.appendChild(p);
 }
 }
 
+function signup(){
+    alert("Signup system not connected yet.");
+}
+
+function login(){
+    alert("Login system not connected yet.");
+}
 createParticles();
 loadHistory();
 drawChart();
 updateRankStats();
-
