@@ -131,12 +131,6 @@ updateRankStats();
 
 }
 
-/* ===== CARD HIGHLIGHT ===== */
-document.querySelectorAll(".rankCard").forEach(c=>{
-    c.classList.remove("active");
-    if(c.dataset.rank===rankKey)c.classList.add("active");
-});
-
 function loadHistory(){
 let history=JSON.parse(localStorage.getItem("gymHistory"))||[];
 historyEl.innerHTML="";
@@ -246,3 +240,4 @@ createParticles();
 loadHistory();
 drawChart();
 updateRankStats();
+
